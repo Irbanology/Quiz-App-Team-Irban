@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <h1 class="bg-blue-100 font-bold text-4xl m-auto m-0 text-center p-1  font-mono ">Add Question</h1>
+    <div class="container m-auto mt-9 border-black border-2 rounded p-5 w-[50%] ">
+        <!-- //or -->
+        <!-- <h1>Section:</h1>
+        <input type="text" class="p-2 border-black h-[35px] border-2 font-mono w-[100%] rounded" id="ques"> -->
+        <label class="font-mono" for="section" class="font-bold  text-xl">Choose a Section:</label>
+        <select id="sel"  name="secList" class=" font-mono border-black border-2 rounded" form="list">
+            <option value="chemistry">Chemistry</option>
+            <option value="math">Math</option>
+            <option value="general-knowledge">General-knowledge</option>
+            <option value="english">English</option>
+            <option value="islamiyat">Islamiyat</option>
+            <option value="computer">Computer</option>
+            <option value="programming">Programming</option>
+        </select>
+
+        <h1 class="font-mono mt-3">Question:</h1>
+        <input type="text" class="p-2 border-black h-[35px] border-2 font-mono w-[100%] rounded" id="ques">
+        <h1 class="font-mono">Ans1:</h1>
+        <input type="text" class="p-2 border-black h-[35px] border-2 font-mono w-[100%] rounded" id="first">
+        <h1 class="font-mono">Ans2:</h1>
+        <input type="text" class="p-2 border-black h-[35px] border-2 font-mono w-[100%] rounded" id="second">
+        <h1 class="font-mono">Ans3:</h1>
+        <input type="text" class="p-2 border-black h-[35px] border-2 font-mono w-[100%] rounded" id="third">
+        <h1 class="font-mono">Ans4:</h1>
+        <input type="text" class="p-2 border-black h-[35px] border-2 font-mono w-[100%] rounded" id="fourth">
+        <h1 class="font-mono">Correct Ans:</h1>
+        <input type="text" class="p-2 border-black h-[35px] border-2 font-mono w-[100%] rounded" id="correct">
+        <button onclick="question()"
+            class="w-[100%] h-[35px] font-mono my-5 border-black border-2 bg-blue-100 rounded  p-1 ">Chaloo</button>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="script.js"></script>
+
+</html>
