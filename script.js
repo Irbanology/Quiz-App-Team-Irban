@@ -14,8 +14,8 @@ const selc = document.getElementById('sel')
 
 
 async function question() {
-    console.log("rework");
-    
+    console.log("Rework-Start");
+
     const questions = quest.value
     const Ans1 = fAns.value
     const Ans2 = sAns.value
@@ -31,9 +31,11 @@ async function question() {
             title: "Oops...",
             text: "Fill All!",
             // footer: '<a href="#">Why do I have this issue?</a>'
-          });
-          return
+        });
+        return
     }
+    console.log("ye chalra hai");
+
     const { data, error } = await supabaseClient
         .from('QUIZ-QUESTION')
         .insert({ Questions: questions, Answer1: Ans1, Answer2: Ans2, Answer3: Ans3, Answer4: Ans4, CorrectAns: corA, Section: seleec })
@@ -45,5 +47,15 @@ async function question() {
             text: "Questions Added!",
             icon: "success"
         });
+        dataCom()
     }
 }
+
+
+async function dataCom() {
+    const { data, error } = await supabaseClient
+        .from('QUIZ-QUESTION')
+        .select()
+        console.log(data);
+}
+dataCom()
