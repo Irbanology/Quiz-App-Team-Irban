@@ -4,6 +4,8 @@ const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey)
 console.log(supabaseClient);
 
 
+
+// ADDING QUETIONS
 const quest = document.getElementById('ques')
 const fAns = document.getElementById('first')
 const sAns = document.getElementById('second')
@@ -14,7 +16,7 @@ const selc = document.getElementById('sel')
 
 
 async function question() {
-    console.log("Rework-Start");
+    console.log("Rework/Start");
 
     const questions = quest.value
     const Ans1 = fAns.value
@@ -34,6 +36,14 @@ async function question() {
         });
         return
     }
+
+    // quest.value = ""
+    // fAns1.value = ""
+    // sAns.value = ""
+    // tAns.value = ""
+    // faAns.value = ""
+    // coAns.value = ""
+    // selc.value = ""
     console.log("ye chalra hai");
 
     const { data, error } = await supabaseClient
@@ -56,6 +66,6 @@ async function dataCom() {
     const { data, error } = await supabaseClient
         .from('QUIZ-QUESTION')
         .select()
-        console.log(data);
+    console.log(data);
 }
 dataCom()
