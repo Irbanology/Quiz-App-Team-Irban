@@ -5,10 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authentication</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="object-contain" style="background-image: url('../Assets/bg.jpg');">
+    <div class="flex justify-center items-center h-[100vh]">
+
+        <div class="container bg-[transparent]-700  p-3 w-[400px] rounded-[5px]  border-black border-4">
+            <h1 class="text-center  w-[100%] text-5xl font-mono bg-black rounded-[20px] my-5 text-white p-3">Quiz<span
+                    class="bg-[orange] rounded-[10px] p-1">Pro</span> </h1>
+            <input type="text" id="name" placeholder="Enter your name"
+                class="focus:outline-none focus:ring focus:ring-[black]  w-[100%] rounded-[5px] font-mono h-[45px] mt-2 p-3">
+            <input type="text" id="inp1" placeholder="Enter your Email"
+                class="focus:outline-none focus:ring focus:ring-[black]    w-[100%] rounded-[5px]  font-mono h-[45px] mt-2 p-3">
+            <input type="password" id="inp2" placeholder="Enter your Password"
+                class="focus:outline-none focus:ring focus:ring-[black]   w-[100%] rounded-[5px] font-mono h-[45px] mt-2 p-3">
+            <div class=" flex justify-center items-center">
+
+                <button
+                    class="hover:bg-black hover:text-[yellow] focus:outline-none focus:ring focus:ring-[yellow]                     justify-center mt-2 m-2  bg-yellow-400 w-[40%] border-black border-2 font-mono rounded-[5px] h-[40px] text-black font-bold "
+                    id="chaloo">Start</button>
+                <button class="hover:bg-black hover:text-[yellow] focus:outline-none focus:ring     focus:ring-[yellow]                  justify-center mt-2 bg-yellow-400 m-2 w-[40%] border-black border-2 font-mono rounded-[5px]
+                    h-[40px] text-black disabled font-bold line-through">Shedule</button>
+            </div>
+        </div>
+        <div class="absolute mt-[600px]">
+            <h1>Made With<b>💗</b> By &copy;<a href="https://github.com/Irbanology" class="font-bold">Irban</a> alrightreserved</h1>
+        </div>
+    </div>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="module" src="auth.js"></script>
 
 </html>

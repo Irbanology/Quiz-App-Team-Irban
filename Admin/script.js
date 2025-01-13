@@ -1,11 +1,11 @@
-const supabaseUrl = 'https://cxekmhqrtebmzkelxjui.supabase.co'
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4ZWttaHFydGVibXprZWx4anVpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY0MDU0NjAsImV4cCI6MjA1MTk4MTQ2MH0.eOuU6U31a5xLpZmn_llacEncJ7_Ho7SRPZjzH8iRZA4'
-const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey)
-console.log(supabaseClient);
+import supabaseClient from "../SupaBase/Supabase.js"
 
 
 
 // ADDING QUETIONS
+const btn = document.getElementById('sawal')
+console.log(btn);
+
 const quest = document.getElementById('ques')
 const fAns = document.getElementById('first')
 const sAns = document.getElementById('second')
@@ -13,8 +13,9 @@ const tAns = document.getElementById('third')
 const faAns = document.getElementById('fourth')
 const coAns = document.getElementById('correct')
 const selc = document.getElementById('sel')
+console.log("GHi");
 
-
+btn.addEventListener('click', question)
 async function question() {
     console.log("Rework/Start");
 
