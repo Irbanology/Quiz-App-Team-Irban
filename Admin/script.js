@@ -60,6 +60,7 @@ async function question() {
         });
         dataCom()
     }
+    // window.location.reload()
 }
 
 
