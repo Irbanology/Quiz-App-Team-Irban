@@ -11,35 +11,61 @@
 <body class="object-contain" style="background-image: url('../Assets/bg.jpg');">
 
     <div class="flex justify-center items-center h-[100vh]">
-
-        <div class="container bg-[transparent]-700  p-3 w-[400px] rounded-[5px]  border-black border-4">
+        <!-- USER-AUTH -->
+        <div id="userAuth" class="container bg-[transparent]-700  p-3 w-[400px] rounded-[5px]  border-black border-4">
             <h1 class="text-center  w-[100%] text-5xl font-mono bg-black rounded-[20px] my-5 text-white p-3">Quiz<span
                     class="bg-[orange] rounded-[10px] p-1">Pro</span> </h1>
 
-            <input type="text"  id="name" placeholder="Enter your name"
-                class="focus:outline-none focus:ring focus:ring-[black]  w-[100%] rounded-[5px] font-mono h-[45px] mt-2 p-3">
+            <input type="text" id="name" placeholder="Enter your name"
+                class="focus:outline-none focus:ring focus:ring-[black] w-[100%] rounded-[5px] font-mono h-[45px] mt-2 p-3">
 
             <input type="text" id="inp1" placeholder="Enter your Email"
-                class="focus:outline-none focus:ring focus:ring-[black]    w-[100%] rounded-[5px]  font-mono h-[45px] mt-2 p-3">
+                class="focus:outline-none focus:ring focus:ring-[black] w-[100%] rounded-[5px]  font-mono h-[45px] mt-2 p-3">
 
             <input type="password" id="inp2" placeholder="Enter your Password"
-                class="focus:outline-none focus:ring focus:ring-[black]   w-[100%] rounded-[5px] font-mono h-[45px] mt-2 p-3">
-
-                <button id="login" class="hidden hover:bg-black hover:text-[yellow] focus:outline-none focus:ring focus:ring-[yellow] ml-[10%] justify-center mt-[10px] bg-yellow-400 m-2 w-[80%] border-black border-2 font-mono rounded-[5px]
-                h-[40px] text-black  font-bold ">Login</button>
+                class="focus:outline-none focus:ring focus:ring-[black] w-[100%] rounded-[5px] font-mono h-[45px] mt-2 p-3">
 
             <div id="btn-div" class=" flex justify-center items-center">
-                <button
-                    class="hover:bg-black hover:text-[yellow] focus:outline-none focus:ring focus:ring-[yellow]                     justify-center mt-2 m-2  bg-yellow-400 w-[40%] border-black border-2 font-mono rounded-[5px] h-[40px] text-black font-bold "
+                <button class="hover:bg-black hover:text-[yellow] focus:outline-none focus:ring focus:ring-[yellow] justify-center mt-2 m-2
+                    bg-yellow-400 w-[40%] border-black border-2 font-mono rounded-[5px] h-[40px] text-black font-bold "
                     id="chaloo">Start</button>
-                <button class="hover:bg-black hover:text-[yellow] focus:outline-none focus:ring     focus:ring-[yellow]                  justify-center mt-2 bg-yellow-400 m-2 w-[40%] border-black border-2 font-mono rounded-[5px]
-                    h-[40px] text-black  font-bold " id="Admin" >Admin ?</button>
+                <button class="hover:bg-black hover:text-[yellow] focus:outline-none focus:ring focus:ring-[yellow] justify-center mt-2 bg-yellow-400 
+                m-2 w-[40%] border-black border-2 font-mono rounded-[5px]
+                    h-[40px] text-black  font-bold " id="Admin">Admin ?</button>
             </div>
         </div>
-        <!-- <div class="absolute mt-[550px]">
+
+        <!-- ADMIN -->
+        <div id="login-div" class=" hidden flex justify-center items-center h-[100vh]">
+            <div class="container bg-[transparent]-700  p-3 w-[400px] rounded-[5px]  border-black border-4">
+                <h1 class="text-center  w-[100%] text-5xl font-mono bg-black rounded-[20px] my-5 text-white p-3">
+                    Quiz<span class="bg-[orange] rounded-[10px] p-1">Pro</span></h1>
+                <input type="text" id="inp3" placeholder="Enter your Admin Email"
+                    class="focus:outline-none focus:ring focus:ring-[black] w-[100%] rounded-[5px]  font-mono h-[45px] mt-2 p-3">
+
+                <input type="password" id="inp4" placeholder="Enter your Admin Password"
+                    class="focus:outline-none  focus:ring focus:ring-[black] w-[100%] rounded-[5px] font-mono h-[45px] mt-2 p-3">
+
+                <!-- <button id="login" class=" hover:bg-black hover:text-[yellow] focus:outline-none focus:ring focus:ring-[yellow] ml-[10%]
+                        justify-center mt-[10px] bg-yellow-400 m-2 w-[80%] border-black border-2 font-mono rounded-[5px]
+                           h-[40px] text-black  font-bold ">Login</button> -->
+                <div id="btn-div" class=" flex justify-center items-center">
+                    <button
+                        class="hover:bg-black hover:text-[yellow] focus:outline-none focus:ring focus:ring-[yellow] justify-center mt-2 m-2
+                                bg-yellow-400 w-[40%] border-black border-2 font-mono rounded-[5px] h-[40px] text-black font-bold "
+                        id="user">User ?</button>
+                    <button class="hover:bg-black hover:text-[yellow] focus:outline-none focus:ring focus:ring-[yellow] justify-center mt-2 bg-yellow-400 
+                            m-2 w-[40%] border-black border-2 font-mono rounded-[5px]
+                                h-[40px] text-black  font-bold " id="login">Login</button>
+                </div>
+            </div>
+
+
+
+            <!-- <div class="absolute mt-[550px]">
             <h1>Made With<b>💗</b> By &copy;<a href="https://github.com/Irbanology" class="font-bold">Irban</a> alrightreserved</h1>
         </div> -->
-    </div>
+        </div>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>

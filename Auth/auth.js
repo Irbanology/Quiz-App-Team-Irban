@@ -1,42 +1,71 @@
-import supabaseClient from "../SupaBase/Supabase.js";
+import supabaseClient from "../Db/Supabase.js";
 
 const btn = document.getElementById('chaloo')
-const div = document.getElementById('btn-div') 
 const LoogIn = document.getElementById('login')
-
-let email = document.getElementById("inp1")
-let pass = document.getElementById("inp2")
-
-let naam = document.getElementById("name")
+LoogIn.addEventListener('click' , AdminLogin)
 btn.addEventListener('click', startAuth)
 const admin = document.getElementById('Admin')
-admin.addEventListener('click' , adminlogin)
+admin.addEventListener('click' , adminn)
+const users = document.getElementById("user")
+users.addEventListener('click' , meuserhoon)
+// ADMIN LOGIN 
+function adminn(){
+    const userdiv = document.getElementById('userAuth')
+    let divv = document.getElementById("login-div")
+    console.log(divv);
+    divv.classList.remove('hidden')
+    userdiv.classList.add('hidden')
+}
+function meuserhoon(){
+    const userdiv = document.getElementById('userAuth')
+    let divv = document.getElementById("login-div")
+    console.log(divv);
+    divv.classList.add('hidden')
+    userdiv.classList.remove('hidden')
+}
 
 
-function adminlogin(){
-    btn.classList.add('hidden')
-    div.classList.add('hidden')
-    naam.classList.add('hidden')
-    LoogIn.classList.remove('hidden')
-
-    let email = document.getElementById("inp1")
-    let pass = document.getElementById("inp2")
-
-    email.setAttribute('placeholder' , 'Enter your Admin Email')
-    pass.setAttribute('placeholder' , 'Enter your Admin Password')
 
 
-    if(!email.value || !pass.value){
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Fill All!",
-        });
-        return
-    }
+function AdminLogin(){
+    console.log("Me chlra hoon");
+    let email = document.getElementById("inp3")
+    let pass = document.getElementById("inp4")
+    email.classList.remove("ring" ,"ring-[red]")
+    pass.classList.remove("ring" ,"ring-[red]")
+console.log(email , pass);
+
+if(!email.value || !pass.value ){
+    email.classList.add("ring" ,"ring-[red]")
+    pass.classList.add("ring" ,"ring-[red]")
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Fill All!",
+    });
+}
 
 }
 
+
+// Questions 
+async function Questions(){
+    const { data, error } = await supabaseClient
+  .from('QUIZ-QUESTION')
+  .select()
+//   if(!error){
+//       console.log(data);
+//   }else{
+//     console.log(error);
+//   }
+
+!error ? console.log(data):console.log(error);  
+}
+Questions()
+
+
+
+// USER SIGN-UP
 async function startAuth(){
     console.log("Start-)");   
     let email = document.getElementById("inp1")
@@ -44,9 +73,6 @@ async function startAuth(){
     let naam = document.getElementById("name")
     console.log(email , pass , naam);
 
-
-    
-      
     // startAuth()
     if(!email.value || !pass.value|| !naam.value || !pass.value >= 6){
         console.log("chal");
@@ -68,9 +94,8 @@ async function startAuth(){
         email: email.value,
         password: pass.value
     })
-//     const { error : errortable } = await supabaseClient
-//   .from('Users-Data')
-//   .insert()
+    // console.log(error);
+    
 
     
 

@@ -1,4 +1,4 @@
-import supabaseClient from "../SupaBase/Supabase.js"
+import supabaseClient from "../Db/Supabase.js"
 
 
 
