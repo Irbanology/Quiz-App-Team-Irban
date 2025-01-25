@@ -14,12 +14,11 @@ async function Questions() {
     console.log("GETTING QUESTIONS FROM SUPABASE");
 
     const { data, error } = await supabaseClient
-        .from('QUIZ-QUESTION')
+        .from('Quiz_Question')
         .select()
+    !error ? console.log(data) : console.log(error);
 
     console.log(data.length);
-
-    !error ? console.log(data) : console.log(error);
 
     for (let i = 0; i < data.length; i++) {
         section = data[i].Section

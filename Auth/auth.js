@@ -8,6 +8,7 @@ const admin = document.getElementById('Admin')
 admin.addEventListener('click' , adminn)
 const users = document.getElementById("user")
 users.addEventListener('click' , meuserhoon)
+
 // ADMIN LOGIN 
 function adminn(){
     const userdiv = document.getElementById('userAuth')
@@ -51,14 +52,8 @@ if(!email.value || !pass.value ){
 // Questions 
 async function Questions(){
     const { data, error } = await supabaseClient
-  .from('QUIZ-QUESTION')
+  .from('Quiz_Question')
   .select()
-//   if(!error){
-//       console.log(data);
-//   }else{
-//     console.log(error);
-//   }
-
 !error ? console.log(data):console.log(error);  
 }
 Questions()
