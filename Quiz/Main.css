@@ -2,22 +2,13 @@
     margin: 0;
     padding: 0;
     text-transform: capitalize;
-}
-.hdd{
-    height: 100vh;
+    font-family: Georgia;
 }
 .header {
-    background-color:#0e365a;
+    background-color:#0e365a ;
     color: white;
-    height: 50px;
     padding-left: 10%;
-    padding-top: 5px;
-    letter-spacing: 1px;
-    
-}
-.quiz-body{
-    border: 2px solid black;
-    height: 500px;
+    height: 70px;
 }
 .footer{
     background-color: #0e365a;
@@ -48,14 +39,96 @@
 }
 .quiz-body{
     width: 70%;
-    height: 500px;
+    height: 80vh;
     background-color: hsl(212, 78%, 91%);
     margin: 20px auto;
-    border: none;
-    border-radius: 20x;
+    border-radius: 10px;
 }
-.score{
+.hero{
     height: 100px;
     background-color: aliceblue;
     border: 2px solid hsl(212, 65%, 84%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: end;
+}
+.quiz-questions{
+    /* border: 2px solid black; */
+    width: 80%;
+    margin: 20px auto;
+}
+.question{
+    /* border: 2px solid red; */
+    text-align: center;
+}
+.options-li{
+    /* border: solid violet; */
+    margin-top: 20px;
+}
+ul{
+    list-style-type: none;
+}
+.options{
+    border: 3px solid #0e365a;
+    padding: 15px;
+    margin: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+.options:hover{
+    border: 3px solid #34be8b;
+    cursor: pointer;
+}
+.options:active{
+    border: 3px solid red;
+    cursor: pointer;
+}
+.next-btn{
+    border: 2px solid black;
+    width: 100px;
+    height: 50px;
+    background: #0e365a;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+button{
+    border: 2px solid black;
+    width: 100px;
+    height: 50px;
+    background: #0e365a;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #032543;
+}
+.question-no{
+    border: 2px solid black;
+}
+.score{
+    width: 80px;
+    background-color: rgb(239, 239, 239);
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-right: 20px;
+}
+.question-no{
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin-top: 20px; 
 }
