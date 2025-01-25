@@ -4,8 +4,6 @@ import supabaseClient from "../Db/Supabase.js"
 
 // ADDING QUETIONS
 const btn = document.getElementById('sawal')
-console.log(btn);
-
 const quest = document.getElementById('ques')
 const fAns = document.getElementById('first')
 const sAns = document.getElementById('second')
@@ -13,7 +11,6 @@ const tAns = document.getElementById('third')
 const faAns = document.getElementById('fourth')
 const coAns = document.getElementById('correct')
 const selc = document.getElementById('sel')
-console.log("GHi");
 
 btn.addEventListener('click', question)
 async function question() {
@@ -33,22 +30,14 @@ async function question() {
             icon: "error",
             title: "Oops...",
             text: "Fill All!",
-            // footer: '<a href="#">Why do I have this issue?</a>'
         });
         return
     }
 
-    // quest.value = ""
-    // fAns1.value = ""
-    // sAns.value = ""
-    // tAns.value = ""
-    // faAns.value = ""
-    // coAns.value = ""
-    // selc.value = ""
     console.log("ye chalra hai");
 
     const { data, error } = await supabaseClient
-        .from('QUIZ-QUESTION')
+        .from('Quiz_Question')
         .insert({ Questions: questions, Answer1: Ans1, Answer2: Ans2, Answer3: Ans3, Answer4: Ans4, CorrectAns: corA, Section: seleec })
         .select()
     if (!error) {
@@ -60,13 +49,21 @@ async function question() {
         });
         dataCom()
     }
+    
+    quest.value = ""
+    fAns.value = ""
+    sAns.value = ""
+    tAns.value = ""
+    faAns.value = ""
+    coAns.value = ""
+    // selc.value = ""
     // window.location.reload()
 }
 
 
 async function dataCom() {
     const { data, error } = await supabaseClient
-        .from('QUIZ-QUESTION')
+        .from('Quiz_Question')
         .select()
     console.log(data);
 }

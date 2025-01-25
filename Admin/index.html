@@ -6,44 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admins</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://stackpath.
+bootstrapcdn.com/font-awesome/4.7.0/css/
+font-awesome.min.css">
 </head>
 
 <body class="bg-black">
 
 
-    <h1 class="bg-[#ffca00]  text-3xl text-center p-1  font-mono ">AdMin.</h1>
+    <div class="h-[100vh] flex flex-col ">
+        <h1 class="bg-[#ffca00]   text-3xl text-center p-1  font-mono ">AdMin.</h1>
+        <div class="container m-auto m-0  bg-[#ffca00]  mb-[65px]  border-black border-2 rounded-[10px] p-5 w-[50%] ">
 
-    <div class="container  bg-[#ffca00]  m-auto mt-2 border-black border-2 rounded-[10px] p-5 max-w-[50%] ">
-        <label class="font-mono" for="section" class="font-bold  text-xl">Choose a Section:</label>
-        <select id="sel" name="secList" class="font-mono w-[20%] border-black border-2 rounded" form="list">
-            <option value="chemistry">Chemistry</option>
-            <option value="math">Math</option>
-            <option value="general-knowledge">General-knowledge</option>
-            <option value="english">English</option>
-            <option value="islamiyat">Islamiyat</option>
-            <option value="computer">Computer</option>
-            <option value="programming">Programming</option>
-        </select>
+            <label class="font-mono" for="section" class="font-bold  text-xl">Choose a Section:</label>
+            <select id="sel" name="secList" class="font-mono w-[20%] border-black border-2 rounded" form="list">
+                <option value="chemistry">Chemistry</option>
+                <option value="math">Math</option>
+                <option value="general-knowledge">General-knowledge</option>
+                <option value="english">English</option>
+                <option value="islamiyat">Islamiyat</option>
+                <option value="computer">Computer</option>
+                <option value="programming">Programming</option>
+            </select>
 
-        <h1 class="font-mono mt-3">Question:</h1>
-        <input type="text" class="p-2 border-black h-[35px] border-2 font-mono  w-[100%] rounded" id="ques">
-        <h1 class="font-mono">Ans1:</h1>
-        <input type="text" class="p-2 border-black h-[35px] border-2 font-mono w-[100%] rounded" id="first">
-        <h1 class="font-mono">Ans2:</h1>
-        <input type="text" class="p-2 border-black h-[35px] border-2 font-mono w-[100%] rounded" id="second">
-        <h1 class="font-mono">Ans3:</h1>
-        <input type="text" class="p-2 border-black h-[35px] border-2 font-mono w-[100%] rounded" id="third">
-        <h1 class="font-mono">Ans4:</h1>
-        <input type="text" class="p-2 border-black h-[35px] border-2 font-mono w-[100%] rounded" id="fourth">
-        <h1 class="font-mono">Correct Ans:</h1>
-        <input type="text" class="p-2 border-black h-[35px] border-2 font-mono w-[100%] rounded" id="correct">
-        <button id="sawal"
-            class="w-[100%] h-[35px] font-mono my-5 border-black border-2 bg-gray-400 hover:bg-black  hover:border-[yellow] hover:text-[yellow]  font-bold  rounded  p-1 ">Add</button>
+            <h1 class="font-mono mt-3">Question:</h1>
+            <input type="text" class="p-2 border-black h-[35px] border-2 font-mono  w-[100%] rounded" id="ques">
+            <h1 class="font-mono">Ans1:</h1>
+            <input type="text" class="p-2 border-black h-[35px] border-2 font-mono w-[100%] rounded" id="first">
+            <h1 class="font-mono">Ans2:</h1>
+            <input type="text" class="p-2 border-black h-[35px] border-2 font-mono w-[100%] rounded" id="second">
+            <h1 class="font-mono">Ans3:</h1>
+            <input type="text" class="p-2 border-black h-[35px] border-2 font-mono w-[100%] rounded" id="third">
+            <h1 class="font-mono">Ans4:</h1>
+            <input type="text" class="p-2 border-black h-[35px] border-2 font-mono w-[100%] rounded" id="fourth">
+            <h1 class="font-mono">Correct Ans:</h1>
+            <input type="text" class="p-2 border-black h-[35px] border-2 font-mono w-[100%] rounded" id="correct">
+            <button id="sawal"
+                class="w-[100%] h-[35px] font-mono my-5 border-black border-2 bg-gray-400 hover:bg-black  hover:border-[yellow] hover:text-[yellow]  font-bold  rounded  p-1 ">Add</button>
+        </div>
+        <!-- <div class="footer  w-[100%]  bg-[#ffca00] text-center text-[10px] flex justify-center  items-center">
+            <h1 class="font-mono text-xl">Made With<b>💗</b> By <a href="https://github.com/Irbanology">Irban</a>
+                &copy;Alrightreserved</h1>
+        </div> -->
+        <footer
+        class="bg-yellow-400 text-[black]  fixed inset-x-0 bottom-0 p-2 text-sm flex justify-between  ">
+        <div class="text-bold"> &copy; Irban-Husnain-Hamble-Saad , all right reserved. </div>
+        <div class="space-x-1">
+            <i class="fa fa-instagram hover:text-white "></i>
+            <i class="fa fa-linkedin hover:text-white"></i>
+            <i class="fa fa-facebook hover:text-white"></i>
+            <i class="fa fa-twitter hover:text-white"></i>
+            <i class="fa fa-github hover:text-white"></i>
+            <i class="fa fa-envelope hover:text-white"></i>
+        </div>
+    </footer>
     </div>
-    <div class="footer  w-[100%]  mt-3 bg-[#ffca00] text-center text-[10px] flex justify-center  items-center">
-        <h1 class="font-mono text-xl">Made With<b>💗</b> By <a href="https://github.com/Irbanology">Irban</a>
-            &copy;Alrightreserved</h1>
-    </div>
+
+    
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
