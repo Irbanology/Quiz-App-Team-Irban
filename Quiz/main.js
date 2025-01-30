@@ -8,19 +8,10 @@ let ans2;
 let ans3;
 let ans4;
 let correctans;
-const startBtn = document.getElementById('start-btn')
-console.log(startBtn);
-
-startBtn.addEventListener('click' , changepg)
-function changepg(){
-    window.location.href = './Main.html'
-}
 
 // GETTING QUESTIONS FROM SUPABASE
 async function Questions() {
     console.log("GETTING QUESTIONS FROM SUPABASE");
-    const ulDiv = document.querySelector('.topicsList')
-    console.log(ulDiv);
 
 
     const { data, error } = await supabaseClient
@@ -50,5 +41,3 @@ async function Questions() {
 
 }
 Questions()
-
-

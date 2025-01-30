@@ -50,7 +50,7 @@ async function AdminLogin() {
         email: email.value,
         password: pass.value,
     })
-    !error ? window.location.href= '../Admin/index.html' : console.log(error);
+    !error ? window.location.href = '../Admin/index.html' : console.log(error);
 
 
 
@@ -108,8 +108,8 @@ async function startAuth() {
         console.log(data.user.id);
         let Uid = data.user.id
         Swal.fire({
-            title: "Good job!",
-            text: "Questions Added!",
+            title: "Starts Now!",
+            // text: "Starts Now!",
             icon: "success"
         });
         const { data: tabdata, error: errortable } = await supabaseClient
@@ -122,15 +122,13 @@ async function startAuth() {
             })
             .select()
         !errortable ? console.log(tabdata) : console.log(errortable);
-        //   if(!errortable){
-        //     email.value = ""
-        //     pass.value = ""
-        //     naam.value = ""
-        //     window.location.href = '../Quiz/quiz.html' 
-        //   }else{
 
-
-        //   }
+          if(!errortable){
+            email.value = ""
+            pass.value = ""
+            naam.value = ""
+            window.location.href = '../Quiz/quiz.html' 
+          }
 
     }
 }

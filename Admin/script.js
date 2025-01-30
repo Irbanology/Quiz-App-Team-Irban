@@ -28,8 +28,8 @@ async function question() {
     if (!questions || !Ans1 || !Ans2 || !Ans3 || !Ans4 || !corA || !seleec) {
         Swal.fire({
             icon: "error",
-            title: "Oops...",
-            text: "Fill All!",
+            title: "Fill All!",
+            // text: "Fill All!",
         });
         return
     }
@@ -43,13 +43,13 @@ async function question() {
     if (!error) {
         console.log(data);
         Swal.fire({
-            title: "Good job!",
-            text: "Questions Added!",
+            title: "Questions Added!",
+            // text: "",
             icon: "success"
         });
         dataCom()
     }
-    
+
     quest.value = ""
     fAns.value = ""
     sAns.value = ""
